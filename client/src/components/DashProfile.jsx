@@ -126,8 +126,8 @@ export default function DashProfile() {
         setUpdateUserSuccess("User's profile updated successfully")
       }
     } catch (error) {
-      dispatch(updateFailure(data.message))
-      setUpdateUserError(data.message)
+      dispatch(updateFailure(error.message))
+      setUpdateUserError(error.message)
     }
   }
   const handleDeleteUser = async ()=>{

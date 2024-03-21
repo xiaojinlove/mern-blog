@@ -61,8 +61,8 @@ export default function DashPosts() {
       if (!res.ok) {
         console.log(data.message);
       } else {
-        setUserPosts((prev) =>
-          prev.filter((post) => post._id !== postIdToDelete)
+        setUserPosts((prev) => //prev 是当前的 userPosts 状态值
+          prev.filter((post) => post._id !== postIdToDelete) //只保留那些 _id 属性与 postIdToDelete 不相等的元素
         );
       }
     } catch (error) {

@@ -17,7 +17,7 @@ const postSchema = new mongoose.Schema(
     },
     image: {
         type: String,
-        default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-write-a-blog-post&psig=AOvVaw2GUUNoXBO5lMpcctKaMK_d&ust=1710938027541000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMjkofyqgIUDFQAAAAAdAAAAABAE"
+        default: "https://www.salesforce.com/ca/blog/wp-content/uploads/sites/12/2023/10/anatomy-of-a-blog-post-deconstructed-open-graph.jpg"
     },
     category: {
         type: String,
