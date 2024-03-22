@@ -17,7 +17,7 @@ const postSchema = new mongoose.Schema(
     },
     image: {
         type: String,
-        default: "https://www.salesforce.com/ca/blog/wp-content/uploads/sites/12/2023/10/anatomy-of-a-blog-post-deconstructed-open-graph.jpg"
+        default: "https://venngage-wordpress.s3.amazonaws.com/uploads/2020/10/Anatomy-of-the-Perfect-Blog-Post.png"
     },
     category: {
         type: String,
