@@ -12,21 +12,7 @@ import { app } from '../firebase'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { useNavigate } from 'react-router-dom'
-const modules = {
-  toolbar: [
-    [{ 'header': [1, 2, 3, 4,false] }],
-    ['bold', 'italic', 'underline', 'strike'],        // 加粗、斜体、下划线、删除线
-    ['blockquote', 'code-block'],                      // 引用、代码块
-    [{ 'list': 'ordered' }, { 'list': 'bullet' }],     // 有序列表、无序列表
-    [{ 'script': 'sub' }, { 'script': 'super' }],      // 下标、上标
-    [{ 'indent': '-1' }, { 'indent': '+1' }],          // 缩进
-    [{ 'direction': 'rtl' }],                          // 文本方向
-    [{ 'align': [] }],                                 // 文本对齐方式
-    ['link'],                        // 插入链接
-    ['code'],                                          // 添加代码选择
-    ['clean']                                          // 清除格式
-  ]
-};
+
 
 export default function CreatePost() {
   const [file, setFile] = useState(null)
@@ -159,7 +145,7 @@ export default function CreatePost() {
           placeholder="Write something..." 
           className="h-72 mb-12" 
           required
-          modules={modules}
+          
           onChange={(value) => setFormData({ ...formData, content: value})}
         />
         <Button type='submit' gradientDuoTone='purpleToPink' >Publish</Button>
