@@ -12,6 +12,22 @@ import { app } from '../firebase'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { useNavigate } from 'react-router-dom'
+const modules = {
+  toolbar: [
+    [{ 'header': [1, 2, 3, 4, false] }],
+    ['bold', 'italic', 'underline', 'strike'],        // 加粗、斜体、下划线、删除线
+    ['blockquote', 'code-block'],                      // 引用、代码块
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],     // 有序列表、无序列表
+    [{ 'script': 'sub' }, { 'script': 'super' }],      // 下标、上标
+    [{ 'indent': '-1' }, { 'indent': '+1' }],          // 缩进
+    [{ 'direction': 'rtl' }],                          // 文本方向
+    [{ 'align': [] }],                                 // 文本对齐方式
+    ['link', 'image', 'video'],                        // 插入链接、图片、视频
+    [{ 'color': [] }, { 'background': [] }],
+    ['clean'],
+    [{ 'code-block': 'javascript' }] // 添加代码块语言选项
+  ]
+};
 
 export default function CreatePost() {
   const [file, setFile] = useState(null)
@@ -103,6 +119,7 @@ export default function CreatePost() {
             <option value="javascript">JavaScript</option>
             <option value="reactjs">React.js</option>
             <option value="nodejs">Node.js</option>
+            <option value="other">Other</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">
